@@ -1,0 +1,115 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.ar.sceneform.plugin'
+
+android {
+    compileSdkVersion 30
+    defaultConfig {
+        applicationId "com.example.ar_app"
+        minSdkVersion 24
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.7.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:30.0.0'
+    implementation 'com.google.ar:core:1.25.0'
+    implementation 'com.google.ar.sceneform.ux:sceneform-ux:1.15.0'
+    implementation 'com.google.ar.sceneform:core:1.15.0'
+    implementation 'com.android.support.constraint:constraint-layout:2.0.4'
+    implementation 'org.jetbrains:annotations:15.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
+
+
+sceneform.asset('sampledata/balloon.fbx',
+        'default',
+        'sampledata/balloon.sfa',
+        'src/main/assets/balloon',)
+sceneform.asset('sampledata/skeleton.fbx',
+        'default',
+        'sampledata/skeleton.sfa',
+        'src/main/assets/skeleton')
+sceneform.asset('sampledata/hheart.fbx',
+        'default',
+        'sampledata/hheart.sfa',
+        'src/main/assets/hheart')
+sceneform.asset('sampledata/heart.fbx',
+        'default',
+        'sampledata/heart.sfa',
+        'src/main/assets/heart')
+sceneform.asset('sampledata/toconxt/tocotoucangreen.fbx',
+        'default',
+        'sampledata/tocotoucan.sfa',
+        'src/main/assets/tocotoucan')
+
+sceneform.asset('sampledata/models/Earth/Earth.gltf',
+        'default',
+        'sampledata/models/Earth/Earth.sfa',
+        'src/main/assets/Earth')
+
+sceneform.asset('sampledata/models/Jupiter/Jupiter.gltf',
+        'default',
+        'sampledata/models/Jupiter/Jupiter.sfa',
+        'src/main/assets/Jupiter')
+
+sceneform.asset('sampledata/models/Luna/Luna.gltf',
+        'default',
+        'sampledata/models/Luna/Luna.sfa',
+        'src/main/assets/Luna')
+
+sceneform.asset('sampledata/models/Mars/Mars.gltf',
+        'default',
+        'sampledata/models/Mars/Mars.sfa',
+        'src/main/assets/Mars')
+
+sceneform.asset('sampledata/models/Mercury/Mercury.gltf',
+        'default',
+        'sampledata/models/Mercury/Mercury.sfa',
+        'src/main/assets/Mercury')
+
+sceneform.asset('sampledata/models/Neptune/Neptune.gltf',
+        'default',
+        'sampledata/models/Neptune/Neptune.sfa',
+        'src/main/assets/Neptune')
+
+sceneform.asset('sampledata/models/Saturn/Saturn.gltf',
+        'default',
+        'sampledata/models/Saturn/Saturn.sfa',
+        'src/main/assets/Saturn')
+
+sceneform.asset('sampledata/models/Sol/Sol.gltf',
+        'default',
+        'sampledata/models/Sol/Sol.sfa',
+        'src/main/assets/Sol')
+
+
+sceneform.asset('sampledata/models/Uranus/Uranus.gltf',
+        'default',
+        'sampledata/models/Uranus/Uranus.sfa',
+        'src/main/assets/Uranus')
+
+sceneform.asset('sampledata/models/Venus/Venus.gltf',
+        'default',
+        'sampledata/models/Venus/Venus.sfa',
+        'src/main/assets/Venus')
